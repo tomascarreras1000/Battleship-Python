@@ -234,10 +234,7 @@ def game_phase(pointer_):
 
     input_char = str(msvcrt.getch()).lower()
 
-    if "f" in input_char:
-        print(f"Flag at {pointer_.x, pointer_.y}")
-
-    elif "w" in input_char: 
+    if "w" in input_char: 
         if pointer_.y > 1:
             pointer_.y -= 1
 
@@ -324,8 +321,6 @@ def ai_game_phase():
 
     elif pointer_key in ai_shots_dict.keys():
         return False
-
-    print("Shot at: ", pointer_key)
 
     return ret
        
