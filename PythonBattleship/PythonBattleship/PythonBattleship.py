@@ -276,14 +276,14 @@ def ai_game_phase():
         pointer_key = list[random.randint(0, len(list) - 1)]
         if random.randint(0, 1):
             random_var = random.randint(-1, 1)
-            if pointer_key % 10 <= 1 and random_var < 0 or pointer_key % 10 == map_width - 1 and random_var > 0:
+            if pointer_key % 10 <= 1 and random_var < 0 or pointer_key % 10 == map_width and random_var > 0:
                 pass
             else:
                 pointer_key += random_var
 
         else:
             random_var = random.randint(-1, 1) * 10
-            if pointer_key // 10 <= 1 and random_var < 0 or pointer_key // 10 == map_width - 1 and random_var > 0:
+            if pointer_key // 10 <= 1 and random_var < 0 or pointer_key // 10 == map_width and random_var > 0:
                 pass
             else:
                 pointer_key += random_var
